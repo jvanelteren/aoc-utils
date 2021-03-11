@@ -1,7 +1,7 @@
-repository: jvanelteren/utils
+repository: jvanelteren/aoc-utils
 output: web
-topnav_title: utils
-site_title: utils
+topnav_title: aoc-utils
+site_title: aoc-utils
 company_name: Jesse van Elteren
 description: A description of your project
 # Set to false to disable KaTeX math
@@ -20,7 +20,7 @@ exclude:
   - .idea/
   - .gitignore
   - vendor
- 
+
 exclude: [vendor]
 
 highlighter: rouge
@@ -63,4 +63,4 @@ plugins:
     - jekyll-remote-theme
     
 remote_theme: fastai/nbdev-jekyll-theme
-baseurl: /utils/
+baseurl: /aoc-utils/
