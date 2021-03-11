@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: AOC
+      title: Bla
       url: core.html
     output: web
     title: utils

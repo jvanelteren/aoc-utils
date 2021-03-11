@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Test": "00_core.ipynb"}
+index = {"dimensions": "00_core.ipynb",
+         "Dim": "00_core.ipynb"}
 
 modules = ["aoc.py"]
 
