@@ -1,7 +1,7 @@
-repository: {jvanelteren}/{aoc-utils}
+repository: jvanelteren/utils
 output: web
-topnav_title: {aoc-utils}
-site_title: {aoc-utils}
+topnav_title: utils
+site_title: utils
 company_name: Jesse van Elteren
 description: A description of your project
 # Set to false to disable KaTeX math
