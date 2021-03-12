@@ -29,6 +29,12 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quality-of-Life">Quality of Life<a class="anchor-link" href="#Quality-of-Life"> </a></h1>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -40,7 +46,65 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dimensions" class="doc_header"><code>dimensions</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L10" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dimensions</code>(<strong><code>obj</code></strong>)</p>
+<h4 id="to_int" class="doc_header"><code>to_int</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L7" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>to_int</code>(<strong><code>inp</code></strong>)</p>
+</blockquote>
+<p>returns items converted to int if possible also works for tuples</p>
+<p>also works recursively
+watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">to_int</span><span class="p">([</span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;99&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">to_int</span><span class="p">([[[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span> <span class="o">==</span> <span class="p">[[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Grid-helpers">Grid helpers<a class="anchor-link" href="#Grid-helpers"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="dimensions" class="doc_header"><code>dimensions</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L32" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dimensions</code>(<strong><code>obj</code></strong>)</p>
 </blockquote>
 <p>takes an iterable of iterables and returns a namedtuple with minima, maxima and range
 for example a 2d numpy array
@@ -132,7 +196,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="positive" class="doc_header"><code>positive</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>positive</code>(<strong>*<code>args</code></strong>)</p>
+<h4 id="positive" class="doc_header"><code>positive</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>positive</code>(<strong>*<code>args</code></strong>)</p>
 </blockquote>
 <p>takes 1 or multiple lists of n coordinates and returns it normalized (getting rid of negatives)</p>
 
@@ -188,7 +252,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="manhattan" class="doc_header"><code>manhattan</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>manhattan</code>(<strong><code>x</code></strong>, <strong><code>y</code></strong>)</p>
+<h4 id="manhattan" class="doc_header"><code>manhattan</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L69" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>manhattan</code>(<strong><code>x</code></strong>, <strong><code>y</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -236,7 +300,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="binarysearch" class="doc_header"><code>binarysearch</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L52" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>binarysearch</code>(<strong><code>minim</code></strong>, <strong><code>maxim</code></strong>, <strong><code>function</code></strong>, <strong><code>flips_to_true</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="binarysearch" class="doc_header"><code>binarysearch</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L74" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>binarysearch</code>(<strong><code>minim</code></strong>, <strong><code>maxim</code></strong>, <strong><code>function</code></strong>, <strong><code>flips_to_true</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>function needs to return a boolean whether the solution is ok
 this implementation is for function that starts with false for minim and flip to true
@@ -338,6 +402,12 @@ solution found 49
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Maze-algo's">Maze algo's<a class="anchor-link" href="#Maze-algo's"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -349,7 +419,7 @@ solution found 49
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="bfs" class="doc_header"><code>bfs</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L79" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bfs</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="bfs" class="doc_header"><code>bfs</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L101" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bfs</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Requires a connections dict with tuples with neighbors per node.
 Or a connections function returning neighbors per node</p>
@@ -416,29 +486,174 @@ else:               returns False</p>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">notebook2script</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Converted 00_core.ipynb.
-Converted index.ipynb.
-</pre>
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="dijkstra" class="doc_header"><code>dijkstra</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L148" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dijkstra</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+<p>Requires a dict with as values a LIST of tuples (neighbor, weight)
+Or a function returning a list of tuples with neighbors and weights per node</p>
+<p>Returns
+if goal == None:    return all paths from start
+elif goal found:    returns path to goal
+else:               returns False</p>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)],</span>
+            <span class="mi">2</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)],</span>
+            <span class="mi">3</span><span class="p">:[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span>
+            <span class="mi">5</span><span class="p">:[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)],</span>
+            <span class="mi">10</span><span class="p">:[(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+            <span class="p">}</span>
+<span class="k">assert</span> <span class="n">dijkstra</span><span class="p">(</span><span class="n">test_dict</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">goal</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_path" class="doc_header"><code>get_path</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L196" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_path</code>(<strong><code>parents</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="dfs" class="doc_header"><code>dfs</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L208" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dfs</code>(<strong><code>graph</code></strong>, <strong><code>start</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Mathy-functions">Mathy functions<a class="anchor-link" href="#Mathy-functions"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="factors" class="doc_header"><code>factors</code><a href="https://github.com/jvanelteren/aoc_utils/tree/branch/aoc_utils/aoc.py#L220" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>factors</code>(<strong><code>n</code></strong>)</p>
+</blockquote>
+<p>return set of divisors of a number</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">factors</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
