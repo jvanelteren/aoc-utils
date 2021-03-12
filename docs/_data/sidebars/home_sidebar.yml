@@ -13,6 +13,6 @@ entries:
       title: Advent of Code Utils
       url: core.html
     output: web
-    title: aocutils
+    title: aoc_utils
   output: web
   title: Sidebar
