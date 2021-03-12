@@ -3,7 +3,11 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"dimensions": "00_core.ipynb",
-         "Dim": "00_core.ipynb"}
+         "Dim": "00_core.ipynb",
+         "positive": "00_core.ipynb",
+         "manhattan": "00_core.ipynb",
+         "binarysearch": "00_core.ipynb",
+         "bfs": "00_core.ipynb"}
 
 modules = ["aoc.py"]
 

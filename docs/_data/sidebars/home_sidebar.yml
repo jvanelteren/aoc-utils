@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: AOC
+      title: Advent of Code Utils
       url: core.html
     output: web
     title: utils

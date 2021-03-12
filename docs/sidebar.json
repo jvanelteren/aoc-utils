@@ -1,6 +1,6 @@
 {
   "utils": {
     "Overview": "/",
-    "AOC": "core.html"
+    "Advent of Code Utils": "core.html"
   }
 }
