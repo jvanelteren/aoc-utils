@@ -1,5 +1,5 @@
 {
-  "utils": {
+  "aoc-utils": {
     "Overview": "/",
     "Advent of Code Utils": "core.html"
   }
