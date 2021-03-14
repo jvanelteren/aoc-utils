@@ -11,7 +11,7 @@ entries:
       url: /
     - output: web,pdf
       title: Advent of Code Utils
-      url: core.html
+      url: context_free_grammar.html
     output: web
     title: aoc_utils
   output: web

@@ -27,7 +27,9 @@ index = {"to_int": "00_core.ipynb",
          "find_pattern_in_iter": "00_core.ipynb",
          "find_repeat": "00_core.ipynb",
          "find_cycle": "00_core.ipynb",
-         "factors": "00_core.ipynb"}
+         "factors": "00_core.ipynb",
+         "CFG": "01_context_free_grammar.ipynb",
+         "cfg": "01_context_free_grammar.ipynb"}
 
 modules = ["aoc.py"]
 
