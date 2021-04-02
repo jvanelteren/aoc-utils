@@ -1,6 +1,7 @@
 {
   "aocutils": {
     "Overview": "/",
-    "Advent of Code Utils": "core.html"
+    "Advent of Code Utils": "core.html",
+    "Context free grammar": "context_free_grammar.html"
   }
 }
