@@ -14,7 +14,7 @@ Haven't uploaded to pypi yet. For now run git clone and if you want to install l
 Just do as follows:
 
 ```
-from aoc_utils.aoc import *
+from aocutils.aoc import *
 to_int(['22222', 'aaaaa', 22222])
 ```
 

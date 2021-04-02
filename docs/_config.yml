@@ -65,4 +65,4 @@ plugins:
 remote_theme: fastai/nbdev-jekyll-theme
 # should be aoc_utils
 # strangely didn't update on git
-baseurl: /aoc_utils/
+baseurl: /aocutils/

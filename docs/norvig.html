@@ -47,7 +47,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="data" class="doc_header"><code>data</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L618" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>data</code>(<strong><code>day</code></strong>:<code>int</code>, <strong><code>parser</code></strong>=<em><code>str</code></em>, <strong><code>sep</code></strong>=<em><code>'\n'</code></em>)</p>
+<h4 id="data" class="doc_header"><code>data</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L622" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>data</code>(<strong><code>filename</code></strong>=<em><code>'input'</code></em>, <strong><code>parser</code></strong>=<em><code>str</code></em>, <strong><code>sep</code></strong>=<em><code>'\n'</code></em>)</p>
 </blockquote>
 <p>Split the day's input file into sections separated by <code>sep</code>, and apply <code>parser</code> to each.</p>
 
@@ -72,7 +72,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="do" class="doc_header"><code>do</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L623" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>do</code>(<strong><code>day</code></strong>, <strong>*<code>answers</code></strong>)</p>
+<h4 id="do" class="doc_header"><code>do</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L627" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>do</code>(<strong><code>day</code></strong>, <strong>*<code>answers</code></strong>)</p>
 </blockquote>
 <p>E.g., do(3) returns {1: day3_1(in3), 2: day3_2(in3)}. Verifies <code>answers</code> if given.</p>
 
@@ -104,7 +104,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="quantify" class="doc_header"><code>quantify</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L637" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>quantify</code>(<strong><code>iterable</code></strong>, <strong><code>pred</code></strong>=<em><code>bool</code></em>)</p>
+<h4 id="quantify" class="doc_header"><code>quantify</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L641" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>quantify</code>(<strong><code>iterable</code></strong>, <strong><code>pred</code></strong>=<em><code>bool</code></em>)</p>
 </blockquote>
 <p>Count the number of items in iterable for which pred is true.</p>
 
@@ -156,7 +156,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="first" class="doc_header"><code>first</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L642" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>first</code>(<strong><code>iterable</code></strong>, <strong><code>default</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="first" class="doc_header"><code>first</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L646" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>first</code>(<strong><code>iterable</code></strong>, <strong><code>default</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Return first item in iterable, or default.</p>
 
@@ -206,7 +206,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="rest" class="doc_header"><code>rest</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L647" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rest</code>(<strong><code>sequence</code></strong>)</p>
+<h4 id="rest" class="doc_header"><code>rest</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L651" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rest</code>(<strong><code>sequence</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -254,7 +254,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="multimap" class="doc_header"><code>multimap</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L650" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multimap</code>(<strong><code>items</code></strong>:<code>Iterable</code>[<code>Tuple</code>])</p>
+<h4 id="multimap" class="doc_header"><code>multimap</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L654" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multimap</code>(<strong><code>items</code></strong>:<code>Iterable</code>[<code>Tuple</code>])</p>
 </blockquote>
 <p>Given (key, val) pairs, return {key: [val, ....], ...}.</p>
 
@@ -347,7 +347,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="prod" class="doc_header"><code>prod</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L658" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prod</code>(<strong><code>numbers</code></strong>)</p>
+<h4 id="prod" class="doc_header"><code>prod</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L662" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prod</code>(<strong><code>numbers</code></strong>)</p>
 </blockquote>
 <p>The product of an iterable of numbers.</p>
 
@@ -371,16 +371,22 @@ nb_path: "02_norvig.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ints</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-    <span class="s2">&quot;Return a tuple of all the integers in text.&quot;</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;-?[0-9]+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)))</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
 
-    </div>
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ints" class="doc_header"><code>ints</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L671" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ints</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
+</blockquote>
+<p>Return a tuple of all the integers in text.</p>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -390,32 +396,6 @@ nb_path: "02_norvig.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ints</span><span class="p">(</span><span class="s1">&#39;abd11d434&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(11, 434)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -431,7 +411,38 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="atom" class="doc_header"><code>atom</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L667" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atom</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
+<h4 id="test" class="doc_header"><code>test</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L676" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>test</code>()</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="atom" class="doc_header"><code>atom</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L680" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atom</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
 </blockquote>
 <p>Parse text into a single float or int or str.</p>
 
@@ -479,7 +490,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="atoms" class="doc_header"><code>atoms</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L678" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atoms</code>(<strong><code>text</code></strong>:<code>str</code>, <strong><code>ignore</code></strong>=<em><code>''</code></em>, <strong><code>sep</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="atoms" class="doc_header"><code>atoms</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L692" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atoms</code>(<strong><code>text</code></strong>:<code>str</code>, <strong><code>ignore</code></strong>=<em><code>''</code></em>, <strong><code>sep</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Parse text into atoms (numbers or strs), possibly ignoring a regex.</p>
 
@@ -527,7 +538,71 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dotproduct" class="doc_header"><code>dotproduct</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L686" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dotproduct</code>(<strong><code>A</code></strong>, <strong><code>B</code></strong>)</p>
+<h4 id="list_atoms" class="doc_header"><code>list_atoms</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L700" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>list_atoms</code>(<strong><code>inp</code></strong>:<code>List</code>[<code>T</code>])</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_atoms</span><span class="p">([</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;3.2&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1, 3.2, &#39;a&#39;, 1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="dotproduct" class="doc_header"><code>dotproduct</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L705" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dotproduct</code>(<strong><code>A</code></strong>, <strong><code>B</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -574,7 +649,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="mapt" class="doc_header"><code>mapt</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L691" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mapt</code>(<strong><code>fn</code></strong>, <strong>*<code>args</code></strong>)</p>
+<h4 id="mapt" class="doc_header"><code>mapt</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L709" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mapt</code>(<strong><code>fn</code></strong>, <strong>*<code>args</code></strong>)</p>
 </blockquote>
 <p>map(fn, *args) and return the result as a tuple.</p>
 
@@ -614,6 +689,121 @@ nb_path: "02_norvig.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="zippify" class="doc_header"><code>zippify</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L720" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>zippify</code>(<strong><code>iterable</code></strong>, <strong><code>num_args</code></strong>, <strong><code>cat</code></strong>=<em><code>False</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;abc&#39;, &#39;bcd&#39;, &#39;cde&#39;, &#39;def&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">list_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">list_multiply</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2, 6, 12]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dotproduct</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>20</pre>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     {% endraw %}

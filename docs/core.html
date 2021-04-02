@@ -38,6 +38,32 @@ nb_path: "00_core.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="o">/</span><span class="n">filename</span><span class="p">,</span><span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="o">/</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}
@@ -53,7 +79,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="to_int" class="doc_header"><code>to_int</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L25" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>to_int</code>(<strong><code>inp</code></strong>)</p>
+<h4 id="to_int" class="doc_header"><code>to_int</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L27" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>to_int</code>(<strong><code>inp</code></strong>)</p>
 </blockquote>
 <p>returns items converted to int if possible also works for tuples</p>
 <p>also works recursively
@@ -105,8 +131,11 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="flatten" class="doc_header"><code>flatten</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>flatten</code>(<strong><code>x</code></strong>)</p>
+<h4 id="chain.from_iterable" class="doc_header"><code>chain.from_iterable</code><a href="" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chain.from_iterable</code>()</p>
 </blockquote>
+<p>chain.from_iterable(iterable) --&gt; chain object</p>
+<p>Alternate chain() constructor taking a single iterable argument
+that evaluates lazily.</p>
 
 </div>
 
@@ -154,7 +183,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="md5" class="doc_header"><code>md5</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L61" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>md5</code>(<strong><code>input</code></strong>)</p>
+<h4 id="md5" class="doc_header"><code>md5</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L63" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>md5</code>(<strong><code>input</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -218,7 +247,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="arr_to_dict" class="doc_header"><code>arr_to_dict</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L66" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>arr_to_dict</code>(<strong><code>arr</code></strong>)</p>
+<h4 id="arr_to_dict" class="doc_header"><code>arr_to_dict</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L68" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>arr_to_dict</code>(<strong><code>arr</code></strong>)</p>
 </blockquote>
 <p>takes in an numpy array or list and returns a dictionary with indices, values</p>
 
@@ -250,7 +279,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="reverse_dict" class="doc_header"><code>reverse_dict</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L78" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>reverse_dict</code>(<strong><code>d</code></strong>)</p>
+<h4 id="reverse_dict" class="doc_header"><code>reverse_dict</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>reverse_dict</code>(<strong><code>d</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -300,7 +329,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="untar_data" class="doc_header"><code>untar_data</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L82" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>untar_data</code>(<strong><code>path</code></strong>, <strong><code>save_dir</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="untar_data" class="doc_header"><code>untar_data</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L84" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>untar_data</code>(<strong><code>path</code></strong>, <strong><code>save_dir</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -317,6 +346,24 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-13-bd3c0ba8cb98&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    elif str(path).endswith(&#34;tgz&#34;):</span>
+<span class="ansi-white-intense-fg ansi-bold">       ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -331,7 +378,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="timeit" class="doc_header"><code>timeit</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L93" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>timeit</code>(<strong><code>description</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="timeit" class="doc_header"><code>timeit</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L98" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>timeit</code>(<strong><code>description</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -368,7 +415,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="nan_inspect" class="doc_header"><code>nan_inspect</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L104" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nan_inspect</code>(<strong><code>df</code></strong>)</p>
+<h4 id="nan_inspect" class="doc_header"><code>nan_inspect</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L109" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nan_inspect</code>(<strong><code>df</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -405,7 +452,7 @@ watch out because passing a string '12t' will be ripped into a list [1,2,t]</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="neighbors" class="doc_header"><code>neighbors</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L121" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>neighbors</code>(<strong><code>i</code></strong>, <strong><code>diag</code></strong>=<em><code>True</code></em>, <strong><code>inc_self</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="neighbors" class="doc_header"><code>neighbors</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>neighbors</code>(<strong><code>i</code></strong>, <strong><code>diag</code></strong>=<em><code>True</code></em>, <strong><code>inc_self</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>determine the neighbors, returns a set with neighboring tuples {(0,1)}
 if inc_self: returns self in results
@@ -460,7 +507,7 @@ if diag: return diagonal moves as well</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="arr_neighbors" class="doc_header"><code>arr_neighbors</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L140" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>arr_neighbors</code>(<strong><code>arr</code></strong>, <strong><code>diag</code></strong>=<em><code>True</code></em>, <strong><code>inc_self</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="arr_neighbors" class="doc_header"><code>arr_neighbors</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L145" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>arr_neighbors</code>(<strong><code>arr</code></strong>, <strong><code>diag</code></strong>=<em><code>True</code></em>, <strong><code>inc_self</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Returns a dictionary with index: set of neighbor indices
 Parameters: diag to include diagonal neighbors, inc_self to include self in result list
@@ -557,7 +604,7 @@ hi (2, 2) {(1, 2), (3, 2), (1, 3), (3, 3), (3, 1), (2, 1), (2, 3), (1, 1)}
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dimensions" class="doc_header"><code>dimensions</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L156" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dimensions</code>(<strong><code>obj</code></strong>)</p>
+<h4 id="dimensions" class="doc_header"><code>dimensions</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L161" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dimensions</code>(<strong><code>obj</code></strong>)</p>
 </blockquote>
 <p>takes an iterable of iterables and returns a namedtuple with minima, maxima and range
 for example a 2d numpy array
@@ -649,7 +696,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="positive" class="doc_header"><code>positive</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L169" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>positive</code>(<strong>*<code>args</code></strong>)</p>
+<h4 id="positive" class="doc_header"><code>positive</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L174" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>positive</code>(<strong>*<code>args</code></strong>)</p>
 </blockquote>
 <p>takes 1 or multiple lists of n coordinates and returns it normalized (getting rid of negatives)</p>
 
@@ -705,7 +752,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="manhattan" class="doc_header"><code>manhattan</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L193" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>manhattan</code>(<strong><code>x</code></strong>, <strong><code>y</code></strong>)</p>
+<h4 id="manhattan" class="doc_header"><code>manhattan</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L198" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>manhattan</code>(<strong><code>x</code></strong>, <strong><code>y</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -753,7 +800,7 @@ dim.min, dim.max and dim.range</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="conv1d" class="doc_header"><code>conv1d</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L197" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>conv1d</code>(<strong><code>arr</code></strong>, <strong><code>conv_shape</code></strong>, <strong><code>mode</code></strong>=<em><code>'same'</code></em>, <strong><code>padding</code></strong>=<em><code>None</code></em>, <strong><code>pad_dir</code></strong>=<em><code>'center'</code></em>)</p>
+<h4 id="conv1d" class="doc_header"><code>conv1d</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L202" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>conv1d</code>(<strong><code>arr</code></strong>, <strong><code>conv_shape</code></strong>, <strong><code>mode</code></strong>=<em><code>'same'</code></em>, <strong><code>padding</code></strong>=<em><code>None</code></em>, <strong><code>pad_dir</code></strong>=<em><code>'center'</code></em>)</p>
 </blockquote>
 <p>Returns a list of kernel views of a string or list
 mode == 'valid': returns only results where the kernel fits
@@ -805,7 +852,7 @@ when mode =='same', default padding is the outer value</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="conv2d" class="doc_header"><code>conv2d</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L240" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>conv2d</code>(<strong><code>arr</code></strong>, <strong><code>conv_shape</code></strong>, <strong><code>mode</code></strong>=<em><code>'valid'</code></em>, <strong><code>padding</code></strong>=<em><code>None</code></em>, <strong><code>pad_dir</code></strong>=<em><code>'center'</code></em>)</p>
+<h4 id="conv2d" class="doc_header"><code>conv2d</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L245" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>conv2d</code>(<strong><code>arr</code></strong>, <strong><code>conv_shape</code></strong>, <strong><code>mode</code></strong>=<em><code>'valid'</code></em>, <strong><code>padding</code></strong>=<em><code>None</code></em>, <strong><code>pad_dir</code></strong>=<em><code>'center'</code></em>)</p>
 </blockquote>
 <p>Returns a list of kernel views of a string or list
 mode == 'valid': returns only results where the kernel fits
@@ -879,7 +926,7 @@ when mode =='same', default padding is the outer value</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="binarysearch" class="doc_header"><code>binarysearch</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L284" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>binarysearch</code>(<strong><code>minim</code></strong>, <strong><code>maxim</code></strong>, <strong><code>function</code></strong>, <strong><code>flips_to_true</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="binarysearch" class="doc_header"><code>binarysearch</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L289" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>binarysearch</code>(<strong><code>minim</code></strong>, <strong><code>maxim</code></strong>, <strong><code>function</code></strong>, <strong><code>flips_to_true</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>function needs to return a boolean whether the solution is ok
 this implementation is for function that starts with false for minim and flip to true
@@ -992,7 +1039,7 @@ solution found 49
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="deduce_matches" class="doc_header"><code>deduce_matches</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L310" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>deduce_matches</code>(<strong><code>input_dict</code></strong>, <strong><code>option_type</code></strong>=<em><code>str</code></em>)</p>
+<h4 id="deduce_matches" class="doc_header"><code>deduce_matches</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L315" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>deduce_matches</code>(<strong><code>input_dict</code></strong>, <strong><code>option_type</code></strong>=<em><code>str</code></em>)</p>
 </blockquote>
 <p>Takes a dict with multiple keys that have one or more options
 The trick is to start with what you know: keys with one option and remove that option for the other keys
@@ -1033,7 +1080,7 @@ Continuing that process leads to every key ending up with one option (hopefully)
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="bfs" class="doc_header"><code>bfs</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L331" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bfs</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="bfs" class="doc_header"><code>bfs</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L336" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bfs</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>, <strong><code>verbose</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Requires a connections dict with tuples with neighbors per node.
 Or a connections function returning neighbors per node</p>
@@ -1108,7 +1155,7 @@ else:               returns False</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dijkstra" class="doc_header"><code>dijkstra</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L377" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dijkstra</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="dijkstra" class="doc_header"><code>dijkstra</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L382" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dijkstra</code>(<strong><code>connections</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Requires a dict with as values a LIST of tuples (neighbor, weight)
 Or a function returning a list of tuples with neighbors and weights per node</p>
@@ -1168,7 +1215,7 @@ else:               returns False</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_path" class="doc_header"><code>get_path</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L425" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_path</code>(<strong><code>parents</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>)</p>
+<h4 id="get_path" class="doc_header"><code>get_path</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L430" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_path</code>(<strong><code>parents</code></strong>, <strong><code>start</code></strong>, <strong><code>goal</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -1199,7 +1246,7 @@ else:               returns False</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dfs" class="doc_header"><code>dfs</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L437" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dfs</code>(<strong><code>graph</code></strong>, <strong><code>start</code></strong>)</p>
+<h4 id="dfs" class="doc_header"><code>dfs</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L442" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dfs</code>(<strong><code>graph</code></strong>, <strong><code>start</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -1236,7 +1283,7 @@ else:               returns False</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="find_pattern_in_iter" class="doc_header"><code>find_pattern_in_iter</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L447" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_pattern_in_iter</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>, <strong><code>n_iter</code></strong>=<em><code>1000000000</code></em>)</p>
+<h4 id="find_pattern_in_iter" class="doc_header"><code>find_pattern_in_iter</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L452" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_pattern_in_iter</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>, <strong><code>goal</code></strong>=<em><code>None</code></em>, <strong><code>n_iter</code></strong>=<em><code>1000000000</code></em>)</p>
 </blockquote>
 <p>Returns when a SPECIFIED pattern has been found from a function
 If goal = None, then first time the start pattern shows up again is returned</p>
@@ -1269,7 +1316,7 @@ If goal = None, then first time the start pattern shows up again is returned</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="find_repeat" class="doc_header"><code>find_repeat</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L462" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_repeat</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>, <strong><code>n_iter</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="find_repeat" class="doc_header"><code>find_repeat</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L467" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_repeat</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>, <strong><code>n_iter</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Returns when a NONSPECFIED repeating pattern has been found</p>
 
@@ -1301,7 +1348,7 @@ If goal = None, then first time the start pattern shows up again is returned</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="find_cycle" class="doc_header"><code>find_cycle</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L478" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_cycle</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>)</p>
+<h4 id="find_cycle" class="doc_header"><code>find_cycle</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L483" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_cycle</code>(<strong><code>start_pattern</code></strong>, <strong><code>function</code></strong>)</p>
 </blockquote>
 <p>Find cycle length of some repeating pattern, by first inspecting which item repeats when
 And subtracting the time the item was first seen</p>
@@ -1377,7 +1424,7 @@ found at step 4 5
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="factors" class="doc_header"><code>factors</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L488" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>factors</code>(<strong><code>n</code></strong>)</p>
+<h4 id="factors" class="doc_header"><code>factors</code><a href="https://github.com/jvanelteren/aocutils/tree/main/aocutils/aoc.py#L493" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>factors</code>(<strong><code>n</code></strong>)</p>
 </blockquote>
 <p>return set of divisors of a number</p>
 
@@ -1422,11 +1469,228 @@ found at step 4 5
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lcm</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">largest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">smallest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">largest</span> <span class="o">%</span> <span class="n">smallest</span>
+        <span class="k">if</span> <span class="n">rest</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">prevrest</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prevrest</span> <span class="o">=</span> <span class="n">rest</span>
+            <span class="n">largest</span> <span class="o">=</span> <span class="n">smallest</span>
+            <span class="n">smallest</span> <span class="o">=</span> <span class="n">rest</span>
+
+<span class="k">def</span> <span class="nf">lcm</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">lcm</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
         <span class="n">lcm</span> <span class="o">=</span> <span class="n">lcm</span><span class="o">*</span><span class="n">i</span><span class="o">//</span><span class="n">gcd</span><span class="p">(</span><span class="n">lcm</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lcm</span>
+<span class="n">lcm</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>84</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">M</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># computes a**b. Actually python pow does this with optional third argument</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> 
+            <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">res</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">%</span> <span class="n">M</span> <span class="k">if</span> <span class="n">M</span> <span class="k">else</span> <span class="n">res</span> <span class="o">*</span> <span class="n">a</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;res&#39;</span><span class="p">,</span><span class="n">res</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">*=</span> <span class="n">a</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">//=</span> <span class="mi">2</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+<span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a 9
+b 6
+a 81
+b 3
+res 81
+a 6561
+b 1
+res 531441
+a 43046721
+b 0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>531441</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0b1100&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-2-94b9d2d99fa8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>pow<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: pow() 2nd argument cannot be negative when 3rd argument specified</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">res</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">81</span>
+<span class="n">res</span> <span class="o">=</span> <span class="mi">9</span><span class="o">*</span><span class="mi">81</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">81</span><span class="o">*</span><span class="mi">81</span>
 </pre></div>
 
     </div>

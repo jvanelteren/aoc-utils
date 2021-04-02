@@ -19,6 +19,6 @@ entries:
       title: Peter Norvig AoC helper functions
       url: norvig.html
     output: web
-    title: aoc_utils
+    title: aocutils
   output: web
   title: Sidebar
