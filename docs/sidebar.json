@@ -2,6 +2,7 @@
   "aocutils": {
     "Overview": "/",
     "Advent of Code Utils": "core.html",
-    "Context free grammar": "context_free_grammar.html"
+    "Context free grammar": "context_free_grammar.html",
+    "Peter Norvig AoC helper functions": "norvig.html"
   }
 }
